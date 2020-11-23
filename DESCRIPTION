@@ -1,0 +1,18 @@
+Package: ScoreStem
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <tracyyy.chen@mail.utoronto.ca>
+Description: ScoreStem is an R package for scoring the stemness of each cell and visualizing the result for user provided single cell trancriptomic data using multiple machine learning algorithms and existing datasets.
+Depends: mlr, randomForest, e1071, FactoMineR,factoextra
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+readMatrix: function 2
+PCAVisualization: function2
+scorePrediction: function2
+cleaned_data: From PCBC dataset.
+test: Split from cleaned_data, for testing mechine learning algotirhms.
+train: Split from cleaned_data, for testing mechine learning algotirhms.
+RoxygenNote: 7.1.1
