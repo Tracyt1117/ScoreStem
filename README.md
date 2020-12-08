@@ -16,8 +16,8 @@ The package can be installed from [GitHub](https://github.com/) with:
 
 ``` r
 require("devtools")
-devtools::install_github("Tracyt1117/scoreStem", build_vignettes = FALSE)
-library("scoreStem")
+devtools::install_github("Tracyt1117/ScoreStem", build_vignettes = FALSE)
+library("ScoreStem")
 
 ```
 
