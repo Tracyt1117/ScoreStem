@@ -37,7 +37,7 @@ using the system.file function
 Package Structure:
 
 ``` 
--ChIPAnalyzer
+-ScoreStem
   |- ScoreStem.Rproj
   |- DESCRIPTION
   |- LISCENCE
