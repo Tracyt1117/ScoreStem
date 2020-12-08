@@ -3,3 +3,8 @@
 export(PCAVisualization)
 export(readMatrix)
 export(scorePrediction)
+import(FactoMineR)
+import(e1071)
+import(factoextra)
+import(mlr)
+import(randomForest)

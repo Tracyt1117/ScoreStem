@@ -17,3 +17,9 @@ a plot of PCA dimentional reduction
 \description{
 Visualize the prediction result with PCA to check if the predicted stem cell can be distinguished from non-stem cell.
 }
+\examples{
+load('../data/test.RData')
+prediction = scorePrediction('SVM',trainSet = test, predictSet = test, target='label')
+PCAVisualization(test[1:13190],prediction)
+
+}

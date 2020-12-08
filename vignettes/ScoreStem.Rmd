@@ -1,0 +1,33 @@
+---
+title: "ScoreStem"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{ScoreStem}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+ScoreStem is an R package for scoring the stemness of each cell and visualizing the result for user provided single cell trancriptomic data using multiple machine learning algorithms and existing datasets.
+
+```{r setup}
+library(ScoreStem)
+```
+
+```{r}
+load('../inst/extdata/test.RData')
+prediction = scorePrediction(algorithm='SVM',trainSet = test, predictSet = test, target='label')
+```
+scorePrediction is a used function to predict the stemness score with specified training and testing datasets.
+
+```{r}
+PCAVisualization(test[1:13190],prediction)
+```
+
+PCAVisualization is a function to visualize the PCA result of prediction set.

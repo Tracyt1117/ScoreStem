@@ -15,6 +15,8 @@
 
 library(mlr)
 
+#' @import mlr randomForest e1071 FactoMineR factoextra
+NULL
 
 #' readMatrix
 #'
@@ -42,9 +44,12 @@ readMatrix <- function(dir) {
 #'
 #' @return prediction result in the form of list
 #' @export
+#' @examples
+#' load('../data/test.RData')
+#' scorePrediction('SVM',trainSet = test, predictSet = test, target='label')
 #'
 scorePrediction <- function(algorithm, trainSet, predictSet,target){
-  task = makeClassifTask(id = "stemScor", data = trainSet, target = target, positive = 1)
+  task = makeClassifTask(id = "stemScore", data = trainSet, target = target, positive = 1)
   if (algorithm == 'randomForest') {
     lrn = makeLearner("classif.randomForest", predict.type = "prob", fix.factors.prediction = TRUE)
     model = train(lrn, task)
@@ -84,6 +89,10 @@ scorePrediction <- function(algorithm, trainSet, predictSet,target){
 #'
 #' @return a plot of PCA dimentional reduction
 #' @export
+#' @examples
+#' load('../data/test.RData')
+#' prediction = scorePrediction('SVM',trainSet = test, predictSet = test, target='label')
+#' PCAVisualization(test[1:13190],prediction)
 #'
 PCAVisualization <- function(predictSet, predictResult){
   predictSet.pca <- FactoMineR::PCA(predictSet, graph = FALSE)

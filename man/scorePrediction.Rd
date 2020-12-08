@@ -21,3 +21,8 @@ prediction result in the form of list
 \description{
 Predict the stemscore of predictSet with trainSet and selected machine learning algorithm.
 }
+\examples{
+load('../data/test.RData')
+scorePrediction('SVM',trainSet = test, predictSet = test, target='label')
+
+}
