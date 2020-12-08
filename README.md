@@ -24,7 +24,7 @@ library("scoreStem")
 ## Overview
 
 ``` r
-ls("scoreStem")
+ls("package:ScoreStem")
 ```
 
 Note: Datasets are raw data found in inst/extdata/, and can be accessed
